@@ -17,7 +17,6 @@ const entranceAnimation = keyframes`
 `
 
 export const AwardsContainer = styled.div`
-  position: relative;
   width: 520px;
   height: 64px;
   opacity: 0;
@@ -27,8 +26,12 @@ export const AwardsContainer = styled.div`
   font-weight: bold;
   color: #3a3a3acc;
   line-height: 22px;
+  margin-top: 50px;
+  margin-bottom: 140px;
   animation: ${(props: PropsType) => {
     const { duration, delay } = props
+    // opacity가 animation이 끝난 후 다시 0으로 리셋이 된다.
+    // 해결하기 위해서 forwards를 추가해준다.
     return css`
       ${entranceAnimation} ${duration}s ease-in-out ${delay}s forwards
     `

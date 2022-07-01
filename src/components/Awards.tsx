@@ -20,6 +20,7 @@ const awardList = [
 ]
 
 export interface AwardType {
+  id: number
   imgSrc: string
   title: string
   description: string

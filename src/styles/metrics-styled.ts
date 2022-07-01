@@ -16,31 +16,26 @@ const entranceAnimation = keyframes`
   }
 `
 
-export const LogoContainer = styled.div`
-  position: relative;
-  width: 400px;
-  height: 400px;
+export const MetricsContainer = styled.div`
+  width: 417px;
+  height: 298px;
   opacity: 0;
 
-  font-size: 15px;
-  color: #3a3a3ab3;
-  margin-top: 150px;
+  font-size: 36px;
+  color: #3a3a3a;
+  text-align: left;
+  padding-top: 150px;
   animation: ${(props: PropsType) => {
     const { duration, delay } = props
+    // opacity가 animation이 끝난 후 다시 0으로 리셋이 된다.
+    // 해결하기 위해서 forwards를 추가해준다.
     return css`
       ${entranceAnimation} ${duration}s ease-in-out ${delay}s forwards
     `
   }};
 `
 
-export const LogoImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 400px;
-  height: auto;
-`
-
-export const LogoText = styled.p`
-  padding-top: 280px;
+export const SingleMetricContainer = styled.div`
+  height: 36px;
+  margin-bottom: 20px;
 `
