@@ -12,7 +12,23 @@ npm install
 npm start
 ```
 
-## 사용 예제 (기능)
+## 기능
+### Fade In
+Fade In 효과는 css의 애니메이션을 활용했다.  
+```
+// Styled-Components 코드
+const entranceAnimation = keyframes`
+  0%{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
+```
+애니메이션이 끝나고 컴포넌트의 opacity가 다시 0으로 리셋되는 이슈가 생겼는데, animation에 forwards를 추가해서 해결했다.
 
 ## 라이센스
 
