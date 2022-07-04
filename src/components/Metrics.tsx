@@ -5,19 +5,19 @@ import SingleMetric from './SingleMetric'
 const metricsList = [
   {
     id: 0,
-    num: 700,
+    target: 700,
     unit: '만 명',
     sentence: '의 여행자',
   },
   {
     id: 1,
-    num: 100,
+    target: 100,
     unit: '만 개',
     sentence: '의 여행 리뷰',
   },
   {
     id: 2,
-    num: 470,
+    target: 470,
     unit: '만 개',
     sentence: '의 여행 일정',
   },
@@ -25,7 +25,7 @@ const metricsList = [
 
 export interface MetricType {
   id: number
-  num: number
+  target: number
   unit: string
   sentence: string
 }
