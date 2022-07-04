@@ -1,4 +1,4 @@
-import { MetricsContainer } from '../styles/metrics-styled'
+import { MetricsContainer } from '../styles/metrics.styled'
 
 import SingleMetric from './SingleMetric'
 

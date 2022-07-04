@@ -1,4 +1,4 @@
-import { SingleAwardContainer, AwardImage } from '../styles/award-styled'
+import { SingleAwardContainer, AwardImage } from '../styles/award.styled'
 
 import { AwardType } from './Awards'
 

@@ -1,5 +1,5 @@
 import LOGO_IMAGE from '../images/triple2x.png'
-import { LogoContainer, LogoImage, LogoText } from '../styles/logo-styled'
+import { LogoContainer, LogoImage, LogoText } from '../styles/logo.styled'
 
 const Logo = () => {
   const duration = 0.7
@@ -11,7 +11,5 @@ const Logo = () => {
     </LogoContainer>
   )
 }
-
-Logo.defaultProps = {}
 
 export default Logo

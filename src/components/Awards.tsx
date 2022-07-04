@@ -1,6 +1,6 @@
 import GOOGLE_LOGO from '../images/play-store2x.png'
 import APPLE_LOGO from '../images/badge-apple4x.png'
-import { AwardsContainer } from '../styles/award-styled'
+import { AwardsContainer } from '../styles/award.styled'
 
 import Award from './Award'
 

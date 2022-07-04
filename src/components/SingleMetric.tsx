@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 
-import { SingleMetricContainer } from '../styles/metrics-styled'
+import { SingleMetricContainer } from '../styles/metrics.styled'
 
 import { MetricType } from './Metrics'
 
