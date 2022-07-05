@@ -39,7 +39,7 @@ const Metrics = ({ duration, delay }: AnimationTypes) => {
   return (
     <MetricsContainer duration={duration} delay={delay}>
       {metricsList.map((metric) => {
-        return <SingleMetric key={metric.id} {...metric} />
+        return <SingleMetric key={metric.id} {...metric} delay={delay * 1000} />
       })}
     </MetricsContainer>
   )
