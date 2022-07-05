@@ -25,6 +25,7 @@ export const LogoContainer = styled.div`
   font-size: 15px;
   color: #3a3a3ab3;
   margin-top: 150px;
+  text-align: center;
   animation: ${(props: PropsType) => {
     const { duration, delay } = props
     return css`
