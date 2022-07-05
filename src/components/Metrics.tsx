@@ -1,4 +1,5 @@
 import { MetricsContainer } from '../styles/metrics.styled'
+import { AnimationTypes } from '../App'
 
 import SingleMetric from './SingleMetric'
 
@@ -8,18 +9,21 @@ const metricsList = [
     target: 700,
     unit: '만 명',
     sentence: '의 여행자',
+    countingUpDuration: 2,
   },
   {
     id: 1,
     target: 100,
     unit: '만 개',
     sentence: '의 여행 리뷰',
+    countingUpDuration: 2,
   },
   {
     id: 2,
     target: 470,
     unit: '만 개',
     sentence: '의 여행 일정',
+    countingUpDuration: 2,
   },
 ]
 
@@ -28,18 +32,21 @@ export interface MetricType {
   target: number
   unit: string
   sentence: string
+  countingUpDuration: number
 }
 
-const Metrics = () => {
-  const duration = 0.7
-  const delay = 0.1
+const Metrics = ({ duration, delay }: AnimationTypes) => {
   return (
     <MetricsContainer duration={duration} delay={delay}>
       {metricsList.map((metric) => {
-        return <SingleMetric key={metric.id} metric={metric} />
+        return <SingleMetric key={metric.id} {...metric} />
       })}
     </MetricsContainer>
   )
 }
 
+Metrics.defaultProps = {
+  duration: 0.7,
+  delay: 0.1,
+}
 export default Metrics

@@ -1,6 +1,7 @@
-import Logo from '../components/Logo'
-
 import { ComponentMeta } from '@storybook/react'
+
+import Logo from '../components/Logo'
+import { AnimationTypes } from '../App'
 
 export default {
   title: 'Logo',
@@ -14,4 +15,6 @@ export default {
   ],
 } as ComponentMeta<typeof Logo>
 
-export const Basic = () => <Logo />
+export const Basic = ({ duration, delay }: AnimationTypes) => (
+  <Logo duration={duration} delay={delay} />
+)

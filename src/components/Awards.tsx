@@ -1,6 +1,7 @@
 import GOOGLE_LOGO from '../images/play-store2x.png'
 import APPLE_LOGO from '../images/badge-apple4x.png'
 import { AwardsContainer } from '../styles/award.styled'
+import { AnimationTypes } from '../App'
 
 import Award from './Award'
 
@@ -26,16 +27,17 @@ export interface AwardType {
   description: string
 }
 
-const Awards = () => {
-  const duration = 0.7
-  const delay = 0.2
+const Awards = ({ duration, delay }: AnimationTypes) => {
   return (
     <AwardsContainer duration={duration} delay={delay}>
       {awardList.map((award) => {
-        return <Award key={award.id} award={award} />
+        return <Award key={award.id} {...award} />
       })}
     </AwardsContainer>
   )
 }
-
+Awards.defaultProps = {
+  duration: 0.7,
+  delay: 0.2,
+}
 export default Awards

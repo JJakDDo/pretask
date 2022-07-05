@@ -2,12 +2,7 @@ import { SingleAwardContainer, AwardImage } from '../styles/award.styled'
 
 import { AwardType } from './Awards'
 
-interface AwardProps {
-  award: AwardType
-}
-
-const Award = ({ award }: AwardProps) => {
-  const { imgSrc, title, description } = award
+const Award = ({ imgSrc, title, description }: AwardType) => {
   return (
     <SingleAwardContainer>
       <AwardImage src={imgSrc} alt={title} />
