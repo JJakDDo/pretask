@@ -7,6 +7,10 @@
 <img src="https://img.shields.io/badge/Styled--components-DB7093?style=flat&logo=Styled-components&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Storybook-FF4785?style=flat&logo=Storybook&logoColor=white"/></a>
 
+## 배포
+
+[스토리북](https://62c3d3e520efb96e583b77f0-odsedjggng.chromatic.com/) Chromatic으로 배포 후 Github Actions 배포 자동화 구현
+
 ## 설치 방법
 
 ### 클라이언트 실행
