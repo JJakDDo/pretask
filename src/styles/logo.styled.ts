@@ -29,7 +29,7 @@ export const LogoContainer = styled.div`
   animation: ${(props: PropsType) => {
     const { duration, delay } = props
     return css`
-      ${entranceAnimation} ${duration}s ease-in-out ${delay}s forwards
+      ${entranceAnimation} ${duration}s ease-out ${delay}s forwards
     `
   }};
 `

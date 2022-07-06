@@ -39,7 +39,10 @@ const Metrics = ({ duration, delay }: AnimationTypes) => {
   return (
     <MetricsContainer duration={duration} delay={delay}>
       {metricsList.map((metric) => {
-        return <SingleMetric key={metric.id} {...metric} delay={delay * 1000} />
+        // Fade In 애니메이션이 선딜레이가 있기 때문에
+        // 숫자 카운팅 애니메이션에도 선딜레이를 추가해준다.
+        // delay (s)
+        return <SingleMetric key={metric.id} {...metric} delay={delay} />
       })}
     </MetricsContainer>
   )

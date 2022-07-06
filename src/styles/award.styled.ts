@@ -33,7 +33,7 @@ export const AwardsContainer = styled.div`
     // opacity가 animation이 끝난 후 다시 0으로 리셋이 된다.
     // 해결하기 위해서 forwards를 추가해준다.
     return css`
-      ${entranceAnimation} ${duration}s ease-in-out ${delay}s forwards
+      ${entranceAnimation} ${duration}s ease-out ${delay}s forwards
     `
   }};
 `

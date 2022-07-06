@@ -29,19 +29,16 @@ const SingleMetric = ({
     function startCountingUp(time: number) {
       // startTimeRef에 값이 있는지 확인하고 없으면 현재 시간을 시작시간으로 할당해준다.
       if (startTimeRef.current !== 0) {
-        // Fade In 애니메이션이 시작되기 전 delay가 있기 때문에,
-        // Fade In 애니메이션 시작과 동시에 Counting Up 애니메이션이 실행이 되게 구현
-        if (time - startTimeRef.current >= delay) {
+        // 선딜레이만큼 시간이 지났는지 확인한다.
+        if (time - startTimeRef.current >= delay * 1000) {
           // 애니메이션이 시작하고 몇초가 흘렀는지 계산한다.
-          const delta = (time - startTimeRef.current - delay) / 1000
-          // let currentTime = delta / countingUpDuration
-          // currentTime--
+          const delta = (time - startTimeRef.current - delay * 1000) / 1000
           // Exponential Ease-Out 함수를 사용해서 숫자가 올라가는 효과가 점점 느려지게 구현했다.
           const inc =
             Number(target) *
             (-1 * Math.pow(2, (-10 * delta) / countingUpDuration) + 1)
 
-          // 원하는 값 또는 2초를 도달했으면 currentNum에 target을 할당한다.
+          // 원하는 값에 도달 또는 원하는 시간만큼 흘렀으면 currentNum에 target을 할당한다.
           // 아니면 계산식의 결과값을 할당한다.
           if (inc >= target || delta >= countingUpDuration) {
             return setCurrentNum(target)
