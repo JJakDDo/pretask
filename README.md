@@ -12,7 +12,7 @@
 
 ## 배포
 
-[스토리북](https://62c3d3e520efb96e583b77f0-odsedjggng.chromatic.com/) Chromatic으로 배포 후 Github Actions으로 배포 자동화 구현
+[스토리북](https://62c3d3e520efb96e583b77f0-ddvbqyauoj.chromatic.com/) Chromatic으로 배포 후 Github Actions으로 배포 자동화 구현
 
 ## 설치 방법
 
